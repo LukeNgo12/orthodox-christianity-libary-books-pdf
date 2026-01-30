@@ -32,7 +32,7 @@ export default function Home() {
       <div>
         <div>Book List</div>
         <main >
-          <div class="grid grid-cols gap-4 ">
+          <div className="grid grid-cols gap-4 ">
                 <Card title={" רשימת ספרים"} />
          
           </div>

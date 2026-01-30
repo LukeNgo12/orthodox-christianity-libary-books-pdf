@@ -74,13 +74,12 @@ export default function Card({ title, description, ...props }) {
                 <p className="text-body">{description}</p>
                 <div className="max-w-md">
                     <div className="mb-2 block">
-                        <Label htmlFor="countries">Select your country</Label>
                     </div>
                     <Select onChange={(e) => setSelectedLanguage(e.target.value)} id="countries" required>
-                        <option selected>Languages</option>
+                        <option defaultValue={"selected"}>Languages</option>
                         {
-                            languages.map((language) => {
-                                return <option value={language.code}>{language.name}</option>
+                            languages.map((language, id) => {
+                                return <option key={id} value={language.code}>{language.name}</option>
                             })
                         }
                     </Select>
